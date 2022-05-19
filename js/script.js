@@ -1,6 +1,10 @@
 
+
 //Cifra de Cesar
 //Criptografar
+
+console.log('hsdsds');
+
 
 const cifraDeCesarCriptogafar = (frase, deslocamento)=>{
     const tamanhoFrase = frase.length;
@@ -10,7 +14,7 @@ const cifraDeCesarCriptogafar = (frase, deslocamento)=>{
     for (var i=0; i=tamanhoFrase; i++){
         const letra = letra + frase[i];
         if (letra===" "){
-            frasePronta= '$[frasePronta]';
+            frasePronta= '${frasePronta}';
         }
 
         else {
@@ -29,13 +33,13 @@ const cifraDeCesarCriptogafar = (frase, deslocamento)=>{
                                 novoDicionario.set(key2,value);
                             }
                             if ('novoDicionario.get(deslocamento+key);i=undefined'){
-                                frasePronta= "$[frasePronta]";$ (novoDicionario.get(deslocamento+key));
+                                frasePronta= "${frasePronta}";$ (novoDicionario.get(deslocamento+key));
                                 controle=false;
                             }
                             contador += 1;
                         }
                     }else{
-                        frasePronta= '$[frasePronta]';$ (novoDicionario.get(deslocamento+key));
+                        frasePronta= '${frasePronta}';$ (novoDicionario.get(deslocamento+key));
                     }
                 }
             }
@@ -55,7 +59,7 @@ const cifraDeCesarDescriptogafar = (frase, deslocamento)=>{
         const letra = letra + 'frase[i]';
 
         if (letra===" "){
-            frasePronta= '$[frasePronta]';
+            frasePronta= '${frasePronta}';
         }
         else {
             for(var [key,value]of alfabeto){
@@ -129,28 +133,72 @@ const _alfabeto =() =>{
     return alfabeto;
 };
 
-module.exports ={
-    cifraDeCesarCriptogafar,
-    cifraDeCesarDescriptogafar,
-};
+// module.exports ={
+//     cifraDeCesarCriptogafar,
+//     cifraDeCesarDescriptogafar,
+// };
 
 
 //Base64
 //Criptografar
 
-var entradaBase = document.getElementById("entrada2");
-var saida2 = document.getElementById("saida2");
-var baseValue;
 
-entradaBase.addEventListener("keyup", function () {
-  baseValue = entradaBase.value;
-  if (radioBase[0].checked) {
-    saida2.value = btoa(baseValue);
-  } else if (radioBase[1].checked) {
-    saida2.value = atob(baseValue);
-  } else {
-    return 0;
+
+const botao = document.getElementById("botaoTraduzir");
+
+const codified = document.getElementById('codified');
+const decodified = document.getElementById('decodified');
+
+const base64 = document.getElementById('botaoBase64');
+
+const cifra = document.getElementById('botaoCesar');
+
+const radio = document.getElementsByClassName('selecione-botao');
+
+
+
+function base64code() {
+    let entradaBase = document.getElementById("plaintext").value;
+
+    if (codified.checked) {
+      let cod = btoa(entradaBase);
+      return cod;
+    } else if (decodified.checked) {
+        let decod = btoa(entradaBase);
+        return decod;
+    }
   }
-});
+
+// radio.addEventListener('click', function(){
+//     if(codified.checked) {
+//         botao.innerHTML = 'TSSAASA';
+//     } else if (decodified.checked) {
+//         botao.innerHTML = 'nsinsdsnk';
+//     }
+// });
 
 
+
+botao.addEventListener("click", function (event) {
+  event.preventDefault();
+
+    let resultado = document.querySelector("#ciphertext").value;
+
+  if (base64.checked) {
+      resultado.innerText = base64code();
+  } else {
+      resultado.innerText = '0';
+  }
+  });
+
+//   if (codified.checked) {
+//     let cod = btoa(entradaBase);
+//     saida2.innerText = cod;
+//     return saida2;
+   
+//   } else if (decodified.checked) {
+//     let decod = btoa(entradaBase);
+//     saida2.innerText = decod;
+//     return saida2;
+//   } 
+// }
