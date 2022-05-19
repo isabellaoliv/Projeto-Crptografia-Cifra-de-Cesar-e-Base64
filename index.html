@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codificador/Decodificador Resilia</title>
+    <link rel="stylesheet" href="./css/style.css">
+
+        <head>
+             <link rel="icon" href="./img/logoResiliaIcon.png" type="image/png" sizes="32x32">
+        </head>
+    
+        <body>
+    
+            <div id="top">
+                <div class="container">
+                    <div id="header">
+    
+                        <a id="ResiliaLogoTop" href="https://www.resilia.com.br/"><img src="./img/logoResilia.png"alt="Logo Resilia" width="150" height="49"></a>
+    
+                        <ul id="menutop">
+                          <li><a href="#traducao">Tradutor</a></li>
+                          <li><a href="#sobreoscodigos">Sobre os códigos</a></li>
+                        </ul>
+                    </div>
+    
+                    <div id="titulo">
+                        <h1>Transforme suas mensagens em códigos</h1>
+                    </div>
+    
+                </div>
+        
+            </div>
+    
+            <div id="traducao">
+                <div class="container">
+    
+                    <div>
+                        <button id="BotaoBase64" style="background-color: #C4C4C4">base64</button>
+                        <button id="BotaoCesar" style="background-color: white">cifra de César</button>
+                        
+                    </div>
+
+                    <div id="caixa-escolha">
+                
+                        <input name = "escolha" type ="radio" value = "Codificar" id = "codified"><label id="legenda">Codificar</label>
+                        <input name = "escolha" type ="radio" value = "Decodificar" id = "decodified"><label id="legenda">Decodificar</label>
+                        
+                    </div>
+            
+    
+                    <div id="traducao2">
+                        <textarea id="plaintext" placeholder=".digite sua mensagem aqui"></textarea>
+                        <p id="cyphertext"></p>
+                    </div>
+    
+                    <div id="traducao3">
+                        <div id="passos">
+                            <label for="pass">Quantos passos?</label>
+                            <input
+                              type="range"
+                              id="chavePasso"
+                              value="13"
+                              min="0"
+                              max="25"
+                            />
+                            <output>13</output>
+                          </div>
+                        
+                        <button id="BotaoTraduzir" onclick="Traduz()">traduzir</button>
+    
+                        <p id="infosenha" class="extraCesar" >as letras da sua mensagem serão substituídas por letras em posições à frente conforme a chave de codificação</p>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div id="sobreoscodigos">
+                <div class="container">
+                    <h2>.sobre os códigos</h2>
+    
+                    <div id="explicacodigos">
+                        <div style="width: 10%; float: left;" >
+                            <h3>.cifra de César</h3>
+                        </div>
+                        <div style="width: 40%; float: left;">
+                            <p>Cifra de Cesar é também conhecida como cifra de troca, código de César ou troca de César, é uma das mais simples e conhecidas técnicas de criptografia. É um tipo de cifra de substituição na qual cada letra do texto é substituída por outra, que se apresenta no alfabeto abaixo dela um número fixo de vezes. O nome do método é em homenagem a Júlio César, que o usou para se comunicar com os seus generais.</p>
+                            <a href="https://pt.wikipedia.org/wiki/Base64#:~:text=Base64%20%C3%A9%20um%20m%C3%A9todo%20para,arquivos%20anexos%20por%20e%2Dmail." >Saiba mais</a>
+                        </div>
+    
+                        <div style="width: 10%; float: left;">
+                            <h3>.código Base64</h3>
+                        </div>
+                        <div style="width: 40%; float: left;">
+                            <p>Base64 é um método para codificação de dados para transferência na Internet (codificação MIME para transferência de conteúdo). É utilizado frequentemente para transmitir dados binários por meios de transmissão que lidam apenas com texto, como por exemplo para enviar arquivos anexos por e-mail.</p>
+                            <a href="https://pt.wikipedia.org/wiki/Base64#:~:text=Base64%20%C3%A9%20um%20m%C3%A9todo%20para,arquivos%20anexos%20por%20e%2Dmail." >Saiba mais</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+      
+    
+           <script  src ="/js/script.js"> </script>
+
+    
+        </body>
+    
+
+    </html>
