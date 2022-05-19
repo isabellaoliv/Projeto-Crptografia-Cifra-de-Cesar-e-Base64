@@ -8,7 +8,7 @@ const cifraDeCesarCriptogafar = (frase, deslocamento)=>{
     let frasePronta = "";
 
     for (var i=0; i=tamanhoFrase; i++){
-        const letra + frase[i];
+        const letra = letra + frase[i];
         if (letra===" "){
             frasePronta= '$[frasePronta]';
         }
@@ -23,19 +23,19 @@ const cifraDeCesarCriptogafar = (frase, deslocamento)=>{
 
                         while (controle){
 
-                            var novoDicionario + new Map();
+                            var novoDicionario =  novoDicionario + new Map();
                             for (var [key2,value]of alfabeto){
                                 key2=key2+contador*26;
                                 novoDicionario.set(key2,value);
                             }
-                            if (novoDicionario.get(deslocamento+key)i=undefined){
-                                frasePronta= "$[frasePronta]"$ (novoDicionario.get(deslocamento+key));
+                            if ('novoDicionario.get(deslocamento+key);i=undefined'){
+                                frasePronta= "$[frasePronta]";$ (novoDicionario.get(deslocamento+key));
                                 controle=false;
                             }
                             contador += 1;
                         }
                     }else{
-                        frasePronta= '$[frasePronta]'$ (novoDicionario.get(deslocamento+key));
+                        frasePronta= '$[frasePronta]';$ (novoDicionario.get(deslocamento+key));
                     }
                 }
             }
@@ -52,7 +52,7 @@ const cifraDeCesarDescriptogafar = (frase, deslocamento)=>{
     let frasePronta = "";
 
     for (let i=0; 1<tamanhoFrase; i++){
-        const letra + frase[i];
+        const letra = letra + 'frase[i]';
 
         if (letra===" "){
             frasePronta= '$[frasePronta]';
@@ -70,7 +70,7 @@ const cifraDeCesarDescriptogafar = (frase, deslocamento)=>{
 
                         while (controle){
                          if (valor>0){
-                             frasePronta = ${frasePronta}${alfabeto.get(valor)}';
+                             frasePronta = '${frasePronta}${alfabeto.get(valor)}';
                              controle = false;
                          }
                          else {
@@ -80,7 +80,7 @@ const cifraDeCesarDescriptogafar = (frase, deslocamento)=>{
                                  dic.set(key,value);
                              }
                              if (dic.get(valor+novoValor)!=undefined){
-                                 frasePronta= ${frasePronta}${dic.get(valor+novoValor)}';
+                                 frasePronta= '${frasePronta}${dic.get(valor+novoValor)}';
                                  controle=false;
                              }
                              contador+=1;
@@ -88,7 +88,7 @@ const cifraDeCesarDescriptogafar = (frase, deslocamento)=>{
                         }
                     }
                     else{
-                        frasePronta = ${frasePronta}${alfabeto.get(key-deslocamento)}';
+                        frasePronta = '${frasePronta}${alfabeto.get(key-deslocamento)}';
                     }
                 }
             }
